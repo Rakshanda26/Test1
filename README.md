@@ -1,5 +1,6 @@
 # Machine_Learning_Project_1
 
+https://git-scm.com/docs/gittutorial
 
 conda create -p venv python==3.7 -y
 
