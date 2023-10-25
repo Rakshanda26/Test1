@@ -44,6 +44,7 @@ docker stop <container id>
 
 python setup.py install
 
+pip install ipykernel 
 
 
 
