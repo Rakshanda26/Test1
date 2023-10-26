@@ -8,4 +8,5 @@ evidently
 dill
 matplotlib
 PyYAML
+six
 -e .
