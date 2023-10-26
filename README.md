@@ -46,7 +46,7 @@ python setup.py install
 
 pip install ipykernel 
 
-
+pip install PyYAML
 
 
 
