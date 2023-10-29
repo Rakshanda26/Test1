@@ -33,8 +33,8 @@ class DataValidation:
             #train_df = pd.read_csv(self.data_ingestion_artifact.train_file_path)
             #test_df = pd.read_csv(self.data_ingestion_artifact.test_file_path)
             
-            #print(train_df)
-            #print(test_df)
+            print(train_df)
+            print(test_df)
             
             return train_df,test_df
         except Exception as e:
@@ -50,14 +50,18 @@ class DataValidation:
             #train_file_path = self.data_ingestion_artifact.train_file_path
             #test_file_path = self.data_ingestion_artifact.test_file_path
             
-            #print(train_file_path)
-            #print(test_file_path)
+            train_file_path = "D:\ML_project\Machine_Learning_Project_1\housing\artifact\data_ingestion\2023-10-28-18-58-22\ingested_data\train\housing.csv"
+            test_file_path = "D:\ML_project\Machine_Learning_Project_1\housing\artifact\data_ingestion\2023-10-28-18-58-22\ingested_data\test\housing.csv"
+            
+            
+            print(train_file_path)
+            print(test_file_path)
 
-            #is_train_file_exist = os.path.exists(train_file_path)
-            #is_test_file_exist = os.path.exists(test_file_path)
+            is_train_file_exist = os.path.exists(train_file_path)
+            is_test_file_exist = os.path.exists(test_file_path)
 
-            #is_available =  is_train_file_exist and is_test_file_exist
-            is_available =  True
+            is_available =  is_train_file_exist and is_test_file_exist
+            #is_available =  True
 
             logging.info(f"Is train and test file exists?-> {is_available}")
             
