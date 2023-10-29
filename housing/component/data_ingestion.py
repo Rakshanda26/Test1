@@ -90,10 +90,15 @@ class DataIngestion:
 
             train_file_path = os.path.join(self.data_ingestion_config.ingested_train_dir,
                                             file_name)
-
+            
+        
             test_file_path = os.path.join(self.data_ingestion_config.ingested_test_dir,
                                         file_name)
             
+            print(train_file_path)
+            print(test_file_path)
+
+    
             if strat_train_set is not None:
                 os.makedirs(self.data_ingestion_config.ingested_train_dir,exist_ok=True)
                 logging.info(f"Exporting training datset to file: [{train_file_path}]")
