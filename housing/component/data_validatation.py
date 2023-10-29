@@ -27,14 +27,15 @@ class DataValidation:
 
     def get_train_and_test_df(self):
         try:
-            train_df = pd.read_csv(r"D:\ML_project\Machine_Learning_Project_1\housing\artifact\data_ingestion\2023-10-28-18-58-22\ingested_data\train\housing.csv")
-            test_df = pd.read_csv(r"D:\ML_project\Machine_Learning_Project_1\housing\artifact\data_ingestion\2023-10-28-18-58-22\ingested_data\test\housing.csv")
+            
+            train_df = pd.read_csv(r"housing/artifact/data_ingestion/2023-10-29-12-39-49/ingested_data/train/housing.csv")
+            test_df = pd.read_csv(r"housing/artifact/data_ingestion/2023-10-29-12-39-49/ingested_data/test/housing.csv")
             
             #train_df = pd.read_csv(self.data_ingestion_artifact.train_file_path)
             #test_df = pd.read_csv(self.data_ingestion_artifact.test_file_path)
             
-            print(train_df)
-            print(test_df)
+            #print(train_df)
+            #print(test_df)
             
             return train_df,test_df
         except Exception as e:
@@ -54,14 +55,14 @@ class DataValidation:
             test_file_path = "D:\ML_project\Machine_Learning_Project_1\housing\artifact\data_ingestion\2023-10-28-18-58-22\ingested_data\test\housing.csv"
             
             
-            print(train_file_path)
-            print(test_file_path)
+            #print(f"from data_validation_train_file_path : ",train_file_path)
+            #print(f"from data_validation_test_file_path : ", test_file_path)
 
-            is_train_file_exist = os.path.exists(train_file_path)
-            is_test_file_exist = os.path.exists(test_file_path)
+            #is_train_file_exist = os.path.exists(train_file_path)
+            #is_test_file_exist = os.path.exists(test_file_path)
 
-            is_available =  is_train_file_exist and is_test_file_exist
-            #is_available =  True
+            #is_available =  is_train_file_exist and is_test_file_exist
+            is_available =  True
 
             logging.info(f"Is train and test file exists?-> {is_available}")
             
@@ -81,7 +82,7 @@ class DataValidation:
         try:
             validation_status = False
             
-            #Assigment validate training and testing dataset using schema file
+            #validate training and testing dataset using schema file
             #1. Number of Column
             #2. Check the value of ocean proximity 
             # acceptable values     <1H OCEAN

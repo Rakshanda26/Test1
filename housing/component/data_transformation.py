@@ -155,6 +155,9 @@ class DataTransformation:
             train_file_path = self.data_ingestion_artifact.train_file_path
             test_file_path = self.data_ingestion_artifact.test_file_path
             
+            print(f"from data_transformation",train_file_path)
+            print(f"from data_transformation",test_file_path)
+            
 
             schema_file_path = self.data_validation_artifact.schema_file_path
             
